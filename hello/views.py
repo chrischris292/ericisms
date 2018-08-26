@@ -41,7 +41,7 @@ class Markov(object):
 			else:
 				self.cache[key] = [w3]
 
-	def generate_markov_text(self, size=25):
+	def generate_markov_text(self, size=15):
 		seed = random.randint(0, self.word_size-3)
 		seed_word, next_word = self.words[seed], self.words[seed+1]
 		w1, w2 = seed_word, next_word
