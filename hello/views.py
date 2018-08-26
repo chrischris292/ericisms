@@ -2,9 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Greeting
-from nltk.chat.util import Chat, reflections
-
-
 import random
 
 class Markov(object):
