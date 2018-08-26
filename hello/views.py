@@ -57,8 +57,9 @@ model = Markov(file)
 # Create your views here.
 def index(request):
     tweet = model.generate_markov_text()
-    return HttpResponse('<h1>'+tweet+'</h1>')
-    # return render(request, 'index.html')
+    # return HttpResponse('<h1>'+tweet+'</h1>')
+    print("HERE")
+    return render(request, 'index.html', {'tweet': tweet})
 
 
 def db(request):
